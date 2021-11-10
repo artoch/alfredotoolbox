@@ -28,7 +28,7 @@ DetailFragment -> Vista donde muestra detalle de la pelicula:
 2) Se muestran los datos en general.
 
 Adicionales ->
-1) Modo oscuro del light y night.
+1) Modo light y night.
 2) Dialogo de alerta antes de cerrar el app.
 3) El app responde en vertical como horizontal.
 4) Test unitarios del login y obtener peliculas.
@@ -51,4 +51,4 @@ Navigation component.
 
 SharedViewModel.
 
-Glide para las imagenes. 
+Glide para las imagenes.
