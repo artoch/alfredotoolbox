@@ -14,6 +14,8 @@
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.25" />
         <entry key="app/src/main/res/layout/include_posts.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_carousel.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_carousel_post.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_carousel_thumb.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_list.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_poster.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_thumb.xml" value="0.1" />

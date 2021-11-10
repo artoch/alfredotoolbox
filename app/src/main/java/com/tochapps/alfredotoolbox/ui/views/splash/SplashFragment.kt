@@ -92,7 +92,7 @@ class SplashFragment : Fragment() {
                 Toast.makeText(requireContext(), getString(R.string.no_auth), Toast.LENGTH_SHORT).show()
             }
             else -> {
-                Toast.makeText(requireContext(), getString(R.string.error), Toast.LENGTH_SHORT).show() }
+                Toast.makeText(requireContext(), getString(R.string.error_conect), Toast.LENGTH_SHORT).show() }
         }
 
     override fun onDestroyView() {

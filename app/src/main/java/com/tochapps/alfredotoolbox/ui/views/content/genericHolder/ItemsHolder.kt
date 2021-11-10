@@ -1,7 +1,8 @@
 package com.tochapps.alfredotoolbox.ui.views.content.genericHolder
 
-import android.view.ViewGroup
+import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.tochapps.alfredotoolbox.R
 import com.tochapps.alfredotoolbox.common.POSTER
 import com.tochapps.alfredotoolbox.common.adapterHelper.GlideCreate
 import com.tochapps.alfredotoolbox.data.network.model.ToolBoxItemEntity
@@ -39,9 +40,12 @@ fun ItemCarouselBinding.bind(item: ToolBoxListEntity, action: (ToolBoxItemEntity
         rvPt.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         tvTitle.text = item.title
         if (item.type == POSTER){
-            val params: ViewGroup.LayoutParams = rvPt.layoutParams
-            params.height = 500
-            rvPt.layoutParams = params
+            val height: Float = context.resources.getDimension(R.dimen.item_post)
+            val newParams = LinearLayout.LayoutParams(
+                rvPt.layoutParams.width,
+                height.toInt()
+            )
+            rvPt.layoutParams = newParams
         }
         rvPt.adapter = MoviesAdapter(item.items, item.type, action)
     }

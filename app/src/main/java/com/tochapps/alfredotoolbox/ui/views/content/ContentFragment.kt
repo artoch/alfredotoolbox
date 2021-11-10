@@ -67,7 +67,7 @@ class ContentFragment : Fragment() {
     }
 
     private fun goToMovie(data: ToolBoxItemEntity){
-        if (data.videoUrl != null){
+        if (data.videoUrl.orEmpty().isNotEmpty()){
             vm.setSelectedMovie(data)
             navController.navigate(R.id.goToDetail)
         }else{
