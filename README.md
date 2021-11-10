@@ -5,7 +5,7 @@ prueba técnica para toolbox
 Como ejecutarlo:
 
 Al descargar el repositorio solo se tiene que descargar las dependencias del proyecto
-una vez terminado ya se puede correr el proyecto.Al
+una vez terminado ya se puede correr el proyecto.
 
 Instrucciones:
 
