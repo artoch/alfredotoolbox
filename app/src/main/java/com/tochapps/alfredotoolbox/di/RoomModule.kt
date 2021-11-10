@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import com.tochapps.alfredotoolbox.common.DATABASE_NAME
 import com.tochapps.alfredotoolbox.data.local.AppDataBase
-import com.tochapps.alfredotoolbox.data.local.dao.testdata.TestDao
+import com.tochapps.alfredotoolbox.data.local.dao.tokendata.TokenDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -24,7 +24,7 @@ object RoomModule {
 
     @Singleton
     @Provides
-    fun postDao(appDatabase: AppDataBase): TestDao {
+    fun postDao(appDatabase: AppDataBase): TokenDao {
         return appDatabase.getTestDao()
     }
 }

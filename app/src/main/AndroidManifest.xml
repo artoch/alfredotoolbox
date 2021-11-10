@@ -12,15 +12,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.Practicetestapp">
         <activity
-            android:name="com.tochapps.alfredotoolbox.MainActivity"
+            android:name="com.tochapps.alfredotoolbox.ui.views.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Practicetestapp.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">practicetestapp</string>
+    <string name="app_name">Toolbox Test</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -9,4 +9,19 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="toolbox_test">Toolbox Test</string>
+    <string name="no_local_token">No token en local</string>
+    <string name="no_token">No Token</string>
+    <string name="expired_token">Token expirado</string>
+    <string name="no_auth">No autorizado</string>
+    <string name="error">Error</string>
+    <string name="no_video">No tiene video adjunto</string>
+    <string name="login_complete">Login completado!</string>
+    <string name="error_conect">Error de conexión</string>
+    <string name="title">TITLE</string>
+    <string name="login">Login</string>
+    <string name="atenci_n">ATENCIÓN</string>
+    <string name="sure_to_exit">Seguro quieres salir de toolbox test?</string>
+    <string name="cancel">cancelar</string>
+    <string name="acept">aceptar</string>
 </resources>

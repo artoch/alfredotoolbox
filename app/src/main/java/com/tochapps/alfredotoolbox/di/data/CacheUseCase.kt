@@ -1,10 +1,9 @@
 package com.tochapps.alfredotoolbox.di.data
 
-import com.tochapps.alfredotoolbox.data.local.repository.testdata.TestCacheRepository
-import com.tochapps.alfredotoolbox.data.local.use_case.AddTestCacheUC
-import com.tochapps.alfredotoolbox.data.local.use_case.DeleteTestCacheUC
-import com.tochapps.alfredotoolbox.data.local.use_case.GetTestCacheUC
-import com.tochapps.alfredotoolbox.data.local.use_case.ListTestCacheUC
+import com.tochapps.alfredotoolbox.data.local.repository.tokendata.TokenRoomRepositoryImpl
+import com.tochapps.alfredotoolbox.data.local.use_case.AddTokenUC
+import com.tochapps.alfredotoolbox.data.local.use_case.DeleteTokenUC
+import com.tochapps.alfredotoolbox.data.local.use_case.GetTokenUC
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,24 +17,24 @@ object CacheUseCase {
     @Singleton
     @Provides
     fun provideGetTestCacheUseCase(
-        dao: TestCacheRepository
-    ): GetTestCacheUC = GetTestCacheUC(dao)
+        dao: TokenRoomRepositoryImpl
+    ): GetTokenUC = GetTokenUC(dao)
 
-    @Singleton
-    @Provides
-    fun provideListTestCacheUseCase(
-        dao: TestCacheRepository
-    ): ListTestCacheUC = ListTestCacheUC(dao)
+//    @Singleton
+//    @Provides
+//    fun provideListTestCacheUseCase(
+//        dao: TokenRoomRepository
+//    ): ListTestCacheUC = ListTestCacheUC(dao)
 
     @Singleton
     @Provides
     fun provideDeleteTestCacheUseCase(
-        dao: TestCacheRepository
-    ): DeleteTestCacheUC = DeleteTestCacheUC(dao)
+        dao: TokenRoomRepositoryImpl
+    ): DeleteTokenUC = DeleteTokenUC(dao)
 
     @Singleton
     @Provides
     fun provideAddTestCacheUseCase(
-        dao: TestCacheRepository
-    ): AddTestCacheUC = AddTestCacheUC(dao)
+        dao: TokenRoomRepositoryImpl
+    ): AddTokenUC = AddTokenUC(dao)
 }

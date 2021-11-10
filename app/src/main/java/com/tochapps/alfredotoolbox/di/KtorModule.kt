@@ -28,7 +28,7 @@ import javax.inject.Singleton
 object KtorModule {
     private const val TIME_OUT = 60_000
     const val BASE_URL_KEY = "BASE_URL_KEY"
-    const val BASE_URL = "https://jsonplaceholder.typicode.com/"
+    const val BASE_URL = "https://echo-serv.tbxnet.com/"
 
     @Singleton
     @Provides

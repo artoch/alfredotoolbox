@@ -1,12 +1,13 @@
 package com.tochapps.alfredotoolbox.common.extension
 
-import com.tochapps.alfredotoolbox.common.ExceptionMapper
-import com.tochapps.alfredotoolbox.common.errors.CommonError
-import com.tochapps.alfredotoolbox.common.errors.ErrorDomain
-import com.tochapps.alfredotoolbox.common.errors.ErrorEntity
-import io.ktor.client.call.*
-import io.ktor.client.features.*
-import io.ktor.network.sockets.*
+import com.tochapps.alfredotoolbox.common.error.CommonError
+import com.tochapps.alfredotoolbox.common.error.ErrorDomain
+import com.tochapps.alfredotoolbox.common.error.ErrorEntity
+import com.tochapps.alfredotoolbox.common.error.ExceptionMapper
+import io.ktor.client.call.receive
+import io.ktor.client.features.ResponseException
+import io.ktor.network.sockets.ConnectTimeoutException
+import io.ktor.network.sockets.SocketTimeoutException
 
 suspend fun Exception.toErrorEntity(): ErrorEntity? =
     try {

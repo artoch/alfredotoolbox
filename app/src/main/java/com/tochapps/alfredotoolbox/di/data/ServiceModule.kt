@@ -1,7 +1,8 @@
 package com.tochapps.alfredotoolbox.di.data
 
-import com.tochapps.alfredotoolbox.data.network.service.testdata.TestService
-import com.tochapps.alfredotoolbox.data.network.service.testdata.TestServiceImpl
+import com.tochapps.alfredotoolbox.data.network.model.BodyLogin
+import com.tochapps.alfredotoolbox.data.network.service.toolboxservice.ToolBoxService
+import com.tochapps.alfredotoolbox.data.network.service.toolboxservice.ToolBoxServiceImpl
 import com.tochapps.alfredotoolbox.di.KtorModule
 import dagger.Module
 import dagger.Provides
@@ -17,11 +18,11 @@ object ServiceModule {
 
     @Singleton
     @Provides
-    fun provideTestService(
+    fun provideLoginService(
         httpClient: HttpClient,
-        @Named(KtorModule.BASE_URL_KEY) baseUrl: String,
-    ): TestService = TestServiceImpl(
+        @Named(KtorModule.BASE_URL_KEY) baseUrl: String
+    ): ToolBoxService = ToolBoxServiceImpl(
         httpClient = httpClient,
-        baseUrl = baseUrl,
+        baseUrl = baseUrl
     )
 }

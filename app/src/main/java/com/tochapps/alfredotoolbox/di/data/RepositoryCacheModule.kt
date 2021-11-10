@@ -1,8 +1,8 @@
 package com.tochapps.alfredotoolbox.di.data
 
-import com.tochapps.alfredotoolbox.data.local.dao.testdata.TestDao
-import com.tochapps.alfredotoolbox.data.local.repository.testdata.TestCacheRepository
-import com.tochapps.alfredotoolbox.data.local.repository.testdata.TestCacheRepositoryImpl
+import com.tochapps.alfredotoolbox.data.local.dao.tokendata.TokenDao
+import com.tochapps.alfredotoolbox.data.local.repository.tokendata.TokenRoomRepository
+import com.tochapps.alfredotoolbox.data.local.repository.tokendata.TokenRoomRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,8 +15,8 @@ object RepositoryCacheModule {
     @Singleton
     @Provides
     fun provideTestRepository(
-        dao: TestDao
-    ): TestCacheRepository = TestCacheRepositoryImpl(
+        dao: TokenDao
+    ): TokenRoomRepository = TokenRoomRepositoryImpl(
         dao
     )
 }
