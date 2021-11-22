@@ -9,7 +9,7 @@ import com.tochapps.alfredotoolbox.common.error.ExceptionMapper
 
 object LoginErrorMapper : ExceptionMapper {
 
-    override fun getCustomError(errorEntity: ErrorEntity)  = when (errorEntity.statusCode) {
+    override fun getCustomError(errorEntity: ErrorEntity)  = when (errorEntity.code) {
         NO_TOKEN -> LoginErrorState.NoToken
         NO_AUTH  -> LoginErrorState.NoAuth
         ERROR_TOKEN -> LoginErrorState.ErrorToken

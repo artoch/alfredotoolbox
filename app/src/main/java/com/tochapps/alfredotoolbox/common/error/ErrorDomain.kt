@@ -8,4 +8,5 @@ abstract class ErrorDomain
 
 sealed class ErrorStatus: ErrorDomain(){
     class ErrorMsg(val msg:String = EMPTY_STRING): ErrorStatus()
+    class ErrorMsgCode(val msg:String = EMPTY_STRING, val code:String = EMPTY_STRING): ErrorStatus()
 }

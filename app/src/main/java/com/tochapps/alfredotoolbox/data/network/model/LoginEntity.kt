@@ -11,6 +11,17 @@ data class LoginEntity (
     @SerialName("type")    val type:  String
 )
 
+
+data class LoginEntityRetro (
+    val sub:   String,
+    val token: String,
+    val type:  String
+)
+
 fun LoginEntity.toRoom() = TokenRoomEntity(
+    id = 1, sub = sub, token = token, type = type
+)
+
+fun LoginEntityRetro.toRoom() = TokenRoomEntity(
     id = 1, sub = sub, token = token, type = type
 )

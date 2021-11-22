@@ -27,7 +27,7 @@ class MainActivityViewModel @Inject constructor(
     val selectedMovie: LiveData<ToolBoxItemEntity> = _selectedMovie
 
     fun login(){
-        toolboxRepo.toolBoxLoginUC.invoke().collectCommon(viewModelScope){
+        toolboxRepo.toolBoxLoginRetro.invoke().collectCommon(viewModelScope){
             _viewState.value = when {
                 it.isLoading -> AppState.Loading
                 it.data != null -> AppState.Success
@@ -37,7 +37,7 @@ class MainActivityViewModel @Inject constructor(
     }
 
     fun getMovies(){
-        toolboxRepo.toolBoxMoviesUC.invoke().collectCommon(viewModelScope){
+        toolboxRepo.toolBoxMoviesRetro.invoke().collectCommon(viewModelScope){
             _viewState.value = when {
                 it.isLoading -> AppState.Loading
                 it.data != null -> setMyMovies(data = it.data)
